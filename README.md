@@ -9,6 +9,8 @@ we will create a nodejs process for eg.
 and all the servers will report the nodejs process that the last hour we received 1000 , 2000 , 3000 req/s ..etc..etc
 and this nodejs process will compute the average requests they are getting and they will talk to the asg(auto scaling group) and tell them to scale up or down based on the demand
 
+THIS WORKS VERY NICELY FOR HTTP SERVERS (NOT FOR WEBSOCKET CONNECIONS)
+
 -- For a real time appication (there is no req per sec , there is a persistent socket conncetion) >
 
 lets say for a video transcoding service like yt
