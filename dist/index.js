@@ -1,9 +1,10 @@
 "use strict";
+//VERTICALL SCALING IN NODE.JS >>>
+//vertically scalin is increasing the size of the server
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
 const cluster_1 = __importDefault(require("cluster"));
 const os_1 = __importDefault(require("os"));
 const totalCpus = os_1.default.cpus().length;
@@ -23,22 +24,33 @@ if (cluster_1.default.isPrimary) { //checking if this is the user started proces
     });
 }
 else {
-    const app = (0, express_1.default)();
+    let c = 0;
+    while (1) {
+        c++;
+    }
+    /*
+    const app = express();
     console.log(`worker process ${process.pid} started`);
-    app.get('/', (req, res) => {
+
+    app.get('/' , (req,res) => {
         res.send("hello world");
     });
+
     app.get("/api/:n", function (req, res) {
         let n = parseInt(req.params.n);
         let count = 0;
-        if (n > 5000000000)
-            n = 5000000000;
+    
+        if (n > 5000000000) n = 5000000000;
+    
         for (let i = 0; i <= n; i++) {
-            count += i;
+          count += i;
         }
+    
         res.send(`Final count is ${count} ${process.pid}`);
-    });
-    app.listen(port, () => {
+      });
+    
+      app.listen(port, () => {
         console.log(`App listening on port ${port}`);
-    });
+      });
+      */
 }
