@@ -1,6 +1,7 @@
 
 
 //VERTICALL SCALING IN NODE.JS >>>
+//vertically scalin is increasing the size of the server
 
 import express from  'express';
 import cluster from 'cluster';
