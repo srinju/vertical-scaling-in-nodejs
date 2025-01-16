@@ -24,3 +24,5 @@ another approach is we have differenet workers for the transcoding service and w
 what we can do . is whenever there is a lot of uploads beyond our service level agrrement that is the queue length becomees large then we scale up our servers that is increase the number of workers. (THIS APPROACH IS SLOWER)
 This queue sys design approach may work for the youtube transcodeing as yt says to you (it is there SLA) that it will take 1 - 2 hours for the transcoding to happen.
 for a replit like application , ther queue architecture will  not work as they dont get that much warm pools as they dont expect 1000 repls to be created in a single second
+
+WATCH THE HOTSTAR SCALING UP DURING IPL MATCHES VIDEO
